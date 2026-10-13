@@ -1,0 +1,17 @@
+server:
+  port: 8761
+
+spring:
+  application:
+    name: discovery-server
+
+eureka:
+    client:
+        # Eureka Server không cần tự đăng ký chính nó
+        register-with-eureka: false
+        fetch-registry: false
+    server:
+        # Tắt chế độ bảo vệ (Self Preservation) để dễ quan sát khi thực hành Lab
+        # enable-self-preservation: false
+        # Thời gian quét định kỳ để loại bỏ các service không gửi heartbeat (ms)
+        eviction-interval-timer-in-ms: 5000
